@@ -1,0 +1,334 @@
+/* DEFINE HERE VARIABLES FOR COLOR, FONTS */
+
+:root {
+  --primary-color: #007bff;
+  --background-color: #181818;
+  --title-color: #CC5500;
+  --left-margin-general: 100px;
+  --right-margin-general: 100px;
+	--left-margin-title: 60px;
+}
+
+/* Registration square format */
+<link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+#mc_embed_signup{
+	background:#181818; 
+	clear:center; 
+	font:14pt Helvetica,Arial,sans-serif;  
+	width:600px;
+}
+
+/* The navigation square */
+
+#square {
+	width: 50px;
+	height: 50px;
+	/*background-color: black;*/
+	background-image: url('../../Mappa/SingleMane.png'); /* added background image */
+	background-repeat: no-repeat;
+	background-size: 70%;
+	background-position: center;
+	margin: 50px auto white;
+	border: 2px solid white;
+	border-radius: 4px;
+  display: block;
+}
+
+
+
+#dropdown {
+	display: none;
+	position: absolute;
+	top: 55px;
+	left: 0;
+	background-color: var(--background-color);
+	min-width: 0px;
+	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+	padding: 12px 16px;
+}
+
+#dropdown a {
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: white;
+}
+
+#dropdown a:hover {
+	background-color: #ddd;
+}
+
+/* The navigation bar */
+
+.navbar {
+  font-family: "Impact";
+  font-size: 12pt;
+  overflow: hidden;
+  background-color: var(--background-color);
+  position: fixed; /* Set the navbar to fixed position */
+  top: 10px; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: white;
+}
+
+/* Main content */
+header {
+  margin-top: 50px; /* Add a top margin to avoid content overlay */
+}
+
+/* Title */
+.title {
+	font-family: "Impact";
+	text-align: center;
+	color:  var(--title-color);
+	font-size: 80px;
+	margin-top: 100px;
+}
+
+/* Image first page  */
+
+.img-front-page {
+			width: 100%; /* Change this value to adjust the image width */
+			height: auto; /* This will automatically adjust the image height to maintain the aspect ratio */
+			border-radius: 10px; /* Smooth borders */
+		}
+
+.img-path {
+			width: 500px; /* Change this value to adjust the image width */
+			height: auto; /* This will automatically adjust the image height to maintain the aspect ratio */
+			border-radius: 10px; /* Smooth borders */
+		}
+		
+li {
+  font-family: "Impact";
+  color: white;
+  display: inline;
+}
+
+
+body {
+  font-family: "Bebas Neue", sans-serif;
+  background-color: var(--background-color);
+  color: #fff;
+  text-align: center;
+  background-image: "dolomiti.jpg";
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+		
+}
+
+h1 {
+  color:#FF1493 ;
+  font-family: "Impact";
+  font-size: 80pt;
+}
+
+p {
+	color: white;
+  font-family: "Bebas Neue", sans-serif;
+	font-size: 15pt;
+	text-align:justify;
+  text-justify: inter-word;
+  max-width: 100%;
+  margin-right: var(--right-margin-general);
+  margin-left: var(--left-margin-general);
+}
+
+p-subsection {
+	color: white;
+  text-justify: inter-word;
+  max-width: 100%;
+  font-size:20pt;
+  margin-right: var(--right-margin-general);
+  margin-left: var(--left-margin-general);
+}
+
+p-center {
+	color: white;
+	text-align:center;
+  text-justify: inter-word;
+  max-width: 100%;
+  margin-right: var(--right-margin-general);
+  margin-left: var(--left-margin-general);
+}
+
+a {
+  color: white;
+	display: block;
+	width: 100px;
+	height: 30px;
+  border: 1px solid white; 
+  padding: 5px;
+	border-radius: 4px;
+}
+
+
+a:hover {
+  color: #ffdd00;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #f1c40f;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  background-color: #f1c40f;
+  color: #000;
+  border: none;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #f1c40f;
+  color: #000;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #ffff00;
+}
+
+
+/*BUTTON*/
+
+
+.button {
+			display: block;
+			width: 100px;
+			height: 40px;
+			background-color: white;
+			color: var(--background-color);
+			text-align: center;
+			line-height: 40px;
+			border-radius: 0px;
+			border-color: var(--background-color);
+			position: absolute;
+			border: 2px solid var(--background-color);
+			top: 2500px;
+			right: 20px;
+		}
+	
+
+/*************************/
+/*LIST*/	
+		
+ul {
+	list-style: none;
+	color:white;
+}
+li::before {
+	color: white;
+}
+
+
+/*************************/
+/*LINE ON THE RIGHT OF TEXT*/
+
+.line-text {
+	display: flex;
+  align-items: center;
+  }
+.text-line {
+  margin-right: 60px;
+  color: var(--title-color);
+  font-family: "Bebas Neue";
+  font-size: 60pt; 
+  margin-left: var(--left-margin-title);
+  }
+.divider {
+  flex: 1;
+  height: 3px;
+  background-color: white; /* Line Color*/
+  margin-right: 60px;
+  }
+  
+/*************************/
+/*IMAGE WITH TEXT INSIDE*/			
+		
+		
+.container {
+	position: relative;
+	text-align: center;
+}
+
+.image-c {
+	display: block;
+	margin: auto;
+	width: 100%;
+	height: auto;
+	border-radius: 20px;
+  margin-right: var(--right-margin-general);
+  margin-left: var(--left-margin-general);
+	
+}
+
+
+.text-c {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 24pt;
+	font-weight: bold;
+	text-shadow: 2px 2px 4px #000000;
+}
+.textcorpus-c {
+	position: absolute;
+	top: 73%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 18px;
+	width: 80%;
+	height: auto;
+}
+
+/*************************/
+/*IMAGE WITH TEXT ASIDE*/	
+
+.container-side {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+.image-side {
+	float: left; /* or float: right; */
+	margin-right: 100px; /* or margin-left: 20px; */
+	margin-left: var(--left-margin-general);;
+	width: 350px;
+	height: auto;
+}
+
+.textcorpus-side {
+	color: var(--background-color);
+	margin-top: 10px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	text-align:left;
+}

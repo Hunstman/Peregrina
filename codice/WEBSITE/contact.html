@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+
+<link rel='stylesheet' href ='indexcss.css'>
+	<title>Contact Us - Running Event</title>
+</head>
+
+<body>
+	<div id="square"></div>
+	<div id="dropdown">
+		  <a href="index.html">Home</a></li>
+		  <a href="path.html">Path</a></li>
+		  <a href="registration.html">Subscription</a></li>
+		  <a href="about.html">About</a></li>
+		  <a href="contact.html">Contact</a></li>
+	</div>
+
+	<script>
+		var square = document.getElementById("square");
+		var dropdown = document.getElementById("dropdown");
+
+		square.addEventListener("mouseenter", function() {
+			dropdown.style.display = "block";
+		});
+
+		square.addEventListener("mouseleave", function() {
+			dropdown.style.display = "none";
+		});
+
+		dropdown.addEventListener("mouseenter", function() {
+			dropdown.style.display = "block";
+		});
+
+		dropdown.addEventListener("mouseleave", function() {
+			dropdown.style.display = "none";
+		});
+	</script>
+</body>
+
+ 
+<p style="margin-top: 0px;"></p>
+<img src="../../Images/logo/logo_white.png" alt="Porca troia" class="img-front-page" style="margin-top:0px; width:200px;">
+<p></p>
+</body>
+<body>	
+	<main>
+		<section>
+			<h2>Get in touch with us</h2>
+			<p>If you have any questions or feedback about the running event, please fill out the form below and we'll get back to you as soon as possible.</p>
+			
+			<form method="post" action="submit.php">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+				
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+				
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" required></textarea>
+				
+				<button type="submit">Submit</button>
+			</form>
+		</section>
+		
+		<section>
+			<h2>Visit us</h2>
+			<p>If you'd like to meet us in person, you can find us at the following address:</p>
+			<address>
+				19, Viale Tunisia<br>
+				Milan, 22001<br>
+				Italy<br>
+			</address>
+			
+			<iframe src="https://www.google.com/maps/place/Viale+Tunisia,+19,+20124+Milano+MI/@45.4780786,9.2012779,17z/data=!3m1!4b1!4m6!3m5!1s0x4786c6c71cd30cdd:0xd3412d706ff20f16!8m2!3d45.4780749!4d9.2034666!16s%2Fg%2F11csnv44jq" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</section>
+	</main>
+	
+	<footer>
+		<p>&copy; 2023 Running Event. All rights reserved.</p>
+	</footer>
+</body>
