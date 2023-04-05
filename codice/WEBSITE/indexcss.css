@@ -4,10 +4,11 @@
   --title-color: #CC5500;
   --left-margin-general: 20%;
   --right-margin-general: 20%;
-	--left-margin-title: 15%;
+	--left-margin-title: 20%;
+	--right-margin-title: 20%;
 	--text-color: white;
 	--background-color-mouse-on: grey;
-	--fontstyle: "Noto Sans Lepcha";
+	--fontstyle: "Montserrat", sans-serif;
 	--square-menu-dimension: 80px;
 	--font-size: 15pt;
 	--image-width: 70%;
@@ -22,14 +23,14 @@
 	width: var(--square-menu-dimension);
 	height: var(--square-menu-dimension);
 	/*background-color: black;*/
-	background-image: url('../../Images/menu_picture.png'); /* added background image */
+	background-image: url('../../Images/Menu_pic/menu_picture.png'); /* added background image */
 	background-repeat: no-repeat;
 	background-size: 70%;
 	background-position: absolute;
-	margin: 50px auto white;
+	margin: 70px auto white;
 	border: 0px solid white;
-	margin-left: 50px;
-	margin-top: 50px;
+	margin-left: 100px;
+	margin-top: 100px;
 	border-radius: 0px;
   display: block;
 }
@@ -98,6 +99,7 @@
 }
 
 /* Links inside the navbar */
+
 .navbar a {
   float: left;
   display: block;
@@ -150,9 +152,14 @@ header {
 li {
   font-family: var(--fontstyle);
   color: var(--text-color);
-  display: inline;
+  text-align: left;
+  margin-left: var(--left-margin-general);
+  margin-bottom: 10px; 
 }
 
+ul {
+  list-style-type: none;
+}
 
 body {
   font-family: var(--fontstyle), sans-serif;
@@ -282,7 +289,7 @@ background-color: var(--background-color-mouse-on);
   align-items: center;
   }
 .text-line {
-  margin-right: 60px;
+  margin-right: 2%;
   color: var(--title-color);
   font-family: var(--fontstyle);
   font-size: 30pt; 
