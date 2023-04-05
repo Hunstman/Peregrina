@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dropdown Menu with Nested Dropdown</title>
+	<style>
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			z-index: 1;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		.dropdown-content .sub-dropdown {
+			position: relative;
+		}
+
+		.dropdown-content .sub-dropdown .sub-dropdown-content {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 100%;
+			z-index: 1;
+		}
+
+		.dropdown-content .sub-dropdown:hover .sub-dropdown-content {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="dropdown">
+		<a href="#">Menu Item 1</a>
+		<div class="dropdown-content">
+			<a href="#">Submenu Item 1</a>
+			<a href="#">Submenu Item 2</a>
+			<div class="sub-dropdown">
+				<a href="#">Submenu Item 3 (with nested submenu)</a>
+				<div class="sub-dropdown-content">
+					<a href="#">Nested Submenu Item 1</a>
+					<a href="#">Nested Submenu Item 2</a>
+					<a href="#">Nested Submenu Item 3</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+

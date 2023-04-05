@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+       
+ <header>
+		<h1>Running Event</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="path.html">Path</a></li>
+				<li><a href="subscription.html">Subscription</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+  <head>
+       <title>500 km Running Event - Description</title>
+  </head>
+  <body>
+    <h1>500 km Running Event</h1>
+    <p>Welcome to the 500 km Running Event, where runners can challenge themselves to complete a long-distance run from Milan to Rome.</p>
+    <p>The race covers a distance of 500 km, and will take place over several days. Runners will have the opportunity to experience the beautiful scenery of Italy, as they make their way from Milan to Rome.</p>
+    <p>Join us for an unforgettable running adventure!</p>
+    <a href="path.html">View the Race Path</a>
+    <div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'it', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>500 km Running Event - Race Path</title>
+  </head>
+  <body>
+    <h1>500 km Running Event - Race Path</h1>
+    <img src="https://www.example.com/race-path-image.jpg" alt="Race Path Image">
+    <p>Here is the path for the 500 km Running Event, which starts in Milan and ends in Rome. The path takes runners through the beautiful countryside of Italy, and features several challenging hills and inclines.</p>
+    <a href="subscription.html">Sign Up Now</a>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>500 km Running Event - Subscription</title>
+  </head>
+  <body>
+    <h1>500 km Running Event - Subscription</h1>
+    <p>To participate in the 500 km Running Event, please fill out the registration form below:</p>
+    <form action="submit-form.php" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone"><br>
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address"><br>
+
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city"><br>
+
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state"><br>
+
+      <label for="zip">Zip Code:</label>
+      <input type="text" id="zip" name="zip"><br>
+
+      <input type="submit" value="Submit">
+    </form>
+    <p>We will contact you shortly with further instructions on how to complete your registration for the event.</p>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About - Running Event</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+		<main>
+    
+    
+    
+		<h2>About Us</h2>
+		<p>Welcome to our running event! We're passionate about running and want to share our love of the sport with you. Whether you're a seasoned runner or new to the sport, we're here to support you every step of the way.</p>
+		<p>At our event, we believe that running isn't just about exercise – it's about pushing yourself to achieve your goals and feeling the thrill of accomplishment. That's why we've designed our course to be challenging yet rewarding, with stunning scenery to take your mind off the distance.</p>
+		<p>We also understand the importance of community in running. There's nothing like the feeling of camaraderie you get from running alongside others who share your passion. That's why we've created an inclusive and welcoming environment for runners of all levels. We want you to feel supported, motivated, and inspired to reach your full potential.</p>
+		<p>Running is more than just a hobby – it's a lifestyle. We believe that the benefits of running extend far beyond the physical, and we're excited to share our enthusiasm with you. So come join us on the course and experience the joy of running!</p>
+	</main>
+	<footer>
+		<p>&copy; 2023 Running Event</p>
+	</footer>
+</body>
+</html>

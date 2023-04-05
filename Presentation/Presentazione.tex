@@ -1,0 +1,215 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[8pt]{beamer}
+\usetheme[sectionpage=none, progressbar=frametitle, numbering=fraction]{Madrid}
+\mode<presentation> {
+	
+	\usecolortheme{beaver}
+	%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+	%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+	
+	\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{multicol}
+%\usepackage{lmodern}
+\usepackage{lipsum}
+\usepackage{subcaption}
+\usepackage{mathtools}
+\usepackage{amsfonts, amssymb}
+\usepackage{marvosym}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{bm}
+\usepackage{overpic}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tafootnotees
+\usepackage{transparent}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{bm}
+\usepackage{listings}
+\usepackage{import}
+\usepackage{braket}
+\usepackage{appendixnumberbeamer}
+\usepackage[familydefault]{Rosario} %% Option 'familydefault' only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+\newcommand{\semitransp}[2][35]{\textcolor{fg!#1}{#2}}
+\usepackage{array}
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\makeatletter
+\def\footnote{\xdef\@thefnmark{}\@footnotetext}
+\makeatother
+
+
+%----------------------------------------------
+% COMMANDS
+%----------------------------------------------
+\newcommand{\ma}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand{\ve}[1]{\boldsymbol{#1}}
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\T}{^{\sf T}}
+\newcommand\nn{\nonumber}
+
+\newcommand{\obs}[1]{\textcolor{red}{#1}}
+\newcommand{\obsb}[1]{\textcolor{blue}{#1}}
+%-----------------------------------------
+% Do not count backup slides
+%-----------------------------------------
+\newcommand{\backupbegin}{
+	\newcounter{finalframe}
+	\setcounter{finalframe}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+	\setcounter{framenumber}{\value{finalframe}}
+}
+
+\day=03\relax
+\month=03\relax
+\year=2023\relax
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\newenvironment{multisys}
+{\begin{minipage}{\displaywidth}
+		\lineskip=1ex
+		\leftskip=0pt plus 1fil
+		\rightskip=.15\displaywidth plus 1fill
+		\parfillskip=-.15\displaywidth plus -1fill
+		$}
+	{$\end{minipage}}
+
+\newenvironment{system}
+{\left\lbrace\renewcommand{\arraystretch}{1.2}\begin{array}{@{}l@{}}}
+	{\end{array}\right.\kern-\nulldelimiterspace}
+
+
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+\graphicspath{{./}}
+\setbeamertemplate{title page}[default][colsep=5bp,rounded=true]
+
+\setbeamerfont{title}{size=\Huge}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\logo{%
+	\makebox[0.95\paperwidth]{%
+		\includegraphics[width=3.5cm,keepaspectratio]{logo/logoIrphe_2b.pdf}%
+		\hfill%
+		%\includegraphics[width=3cm,keepaspectratio]{logo/Centrale.png}\hspace{.2cm}%
+		%\hfill%
+		\includegraphics[width=2.5cm,keepaspectratio]{logo/Centrale2.pdf}\hspace{0.3cm}}}%
+
+\title[C0pep0d]{
+	\scalebox{1.3}{\textcolor{white}{\textbf{How do copepods use}}} \\\scalebox{1.3}{\textcolor{white}{\textbf{hydrodynamic signals to \lq{}see\rq{}?}}}} 
+% The short title appears at the bottom of every slide, the full title is only on the title page
+
+% Your name
+\author[Tommaso Redaelli]{\\[10mm]\Large Tommaso Redaelli}
+\institute[IRPHE]%{$^1$Aix-Marseille Univ., CNRS, Centrale Marseille, IRPHE, Marseille, France\\$^2$ Aix-Marseille Univ., CNRS, IUSTI, Marseille, France\\$^3$ Physics Dept., Gothenburg University, Gothenburg, Sweden \\$^4$Universit\'e de Lorraine, CNRS, LEMTA, Vandoeuvre-Les-Nancy, France\\$^5$ Univ. of Southern California, Kanso Lab, Los Angeles, USA}
+
+%\setbeamertemplate{itemize items}[triangle]
+\newcommand{\SubItem}[1]{{\setlength\itemindent{15pt} \item[-] #1}}
+\setbeamercolor{titlelike}{parent=structure}
+%\setbeamercolor{titlelike}{fg=whale}
+\begin{document}
+	
+% ---------------------------------------------------------
+% 	Title 
+% ---------------------------------------------------------
+	
+\bgroup
+\makeatletter
+\setbeamertemplate{footline}
+{
+	\leavevmode%
+	\hbox{%
+		\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+			\usebeamerfont{author in head/foot}\insertshortauthor\expandafter\beamer@ifempty\expandafter{\beamer@shortinstitute}{}{~~(\insertshortinstitute)}
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+			\usebeamerfont{title in head/foot}\insertshorttitle
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+			\usebeamerfont{date in head/foot}\insertshortdate{}
+			\hspace*{2em}
+			\hspace*{6ex}
+	\end{beamercolorbox}}%
+	\vskip0pt%
+}
+\makeatother
+{
+	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{figures/Dark_Background3.pdf}}
+\begin{frame}[t]
+	\setbeamercolor{item}{fg=white}
+	\setbeamercolor{normal text}{fg=white}
+	\usebeamercolor[fg]{normal text}
+	\titlepage
+\end{frame}
+}
+\egroup
+\logo{}
+\setcounter{framenumber}{0}
+
+
+% ---------------------------------------------------------
+% 	slide 1
+% ---------------------------------------------------------
+
+
+{%
+	\setbeamercolor{background canvas}{bg=black}
+	\begin{frame}{\textbf{Plankton}}
+		\setbeamercolor{item}{fg=white}
+		\setbeamercolor{normal text}{fg=white}
+		\usebeamercolor[fg]{normal text}
+				\begin{figure}
+					\def\svgwidth{0.85\columnwidth}\import{latex_figures/}{Plankton_species_name.pdf_tex}
+					\caption*{Credits to CNRS Photothèque (C. Sardet)}
+				\end{figure}
+	\end{frame}
+}
+
+
+
+
+
+
+
+
+\end{document} 

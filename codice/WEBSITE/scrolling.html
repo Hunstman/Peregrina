@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Superimposed Images with Arrows</title>
+    <style>
+      .container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  width: 200px;
+  height: 200px;
+  object-fit:cover;
+}
+
+.container img.active {
+  opacity: 1;
+}
+
+.arrow {
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: black;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 1px;
+  padding: 0px;
+}
+
+.arrow-left-middle {
+  left: 0;
+  margin-left: 10px;
+}
+
+.arrow-right-middle {
+  right: 0;
+  margin-right: 0px;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img class="active" src="../../Images/path_1.png" alt="Image 1">
+      <img src="../../Images/menu_picture.png" alt="Image 2">
+      <img src="../../Images/path_1.png" alt="Image 3">
+      <img src="../../Images/path_1.png" alt="Image 4">
+      <img src="../../Images/path_1.png" alt="Image 5">
+      <div class="arrow arrow-left-middle" onclick="prevImage()">&larr;</div>
+      <div class="arrow arrow-right-middle" onclick="nextImage()">&rarr;</div>
+    </div>
+    
+    <script>
+      let currentImage = 0;
+      const images = document.querySelectorAll('.container img');
+      
+      function showImage(index) {
+        images[currentImage].classList.remove('active');
+        images[index].classList.add('active');
+        currentImage = index;
+      }
+      
+      function nextImage() {
+        let index = currentImage + 1;
+        if (index >= images.length) {
+          index = 0;
+        }
+        showImage(index);
+      }
+      
+      function prevImage() {
+        let index = currentImage - 1;
+        if (index < 0) {
+          index = images.length - 1;
+        }
+        showImage(index);
+      }
+    </script>
+  </body>
+</html>
+

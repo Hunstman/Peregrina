@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu Example</title>
+	<style>
+		.menu-button {
+			display: inline-block;
+			padding: 10px;
+			margin-right: 20px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<button class="menu-button">Button 1</button>
+	<button class="menu-button">Button 2</button>
+	<button class="menu-button">Button 3</button>
+</body>
+</html>
+In this example, each button is given the class "menu-button", which applies the CSS styles that space them apart and give them a green background color. You can modify the padding, margin, background color, and other CSS styles as desired to customize the appearance of the menu.
+
+
+
+
+
+
+<html>
+<head>
+	<title>Mailchimp Subscription Form</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#subscribe-form").submit(function(event) {
+				event.preventDefault();
+				var email = $("#email-input").val();
+
+				// Your API key and list ID from Mailchimp
+				var apikey = "32d1dd67ed5f748aa45103e76d93b087-us21";
+				var listid = "peregrinos_mail";
+
+				// Data to send to Mailchimp API
+				var data = {
+					email_address: email,
+					status: "subscribed"
+				};
+
+				// URL for the Mailchimp API endpoint
+				var url = "https://usX.api.mailchimp.com/3.0/lists/" + listid + "/members/";
+
+				$.ajax({
+					type: "POST",
+					url: url,
+					data: JSON.stringify(data),
+					beforeSend: function(xhr) {
+						xhr.setRequestHeader("Authorization", "Basic " + btoa("username:" + apikey));
+					},
+					success: function(response) {
+						alert("Thank you for subscribing!");
+						$("#email-input").val("");
+					},
+					error: function(xhr, status, error) {
+						alert("There was an error subscribing. Please try again later.");
+						console.log(xhr.responseText);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>Subscribe to our newsletter</h1>
+	<form id="subscribe-form">
+		<label for="email-input">Email:</label>
+		<input type="email" id="email-input" required>
+		<button type="submit">Subscribe</button>
+	</form>
+</body>
+</html>
